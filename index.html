@@ -109,10 +109,10 @@
 				for (var i = 0; i < arrayLength; i++) {
     				if (PicArray[i][0] == code.toUpperCase()) {
     					if (doesFileExist("photos/"+PicArray[i][0]+".jpg")) {
-	    					div.innerHTML = "<div style='width: 30%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></div>";
+	    					div.innerHTML = "<div style='width: 50%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></div>";
     						
     						if ( doesFileExist("photos/"+PicArray[i][0]+".2.jpg") ) {
-    							div.innerHTML = div.innerHTML + "<div style='width: 30%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".2.jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".2.jpg'>download</a></div>";
+    							div.innerHTML = div.innerHTML + "<div style='width: 50%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".2.jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".2.jpg'>download</a></div>";
     						}
     						
     						return;
