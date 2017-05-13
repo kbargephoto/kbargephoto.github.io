@@ -92,7 +92,7 @@
  				var arrayLength = PicArray.length;
  				var div = document.getElementById('photoDiv');
 				for (var i = 0; i < arrayLength; i++) {
-    				if (PicArray[i][0] == code) {
+    				if (PicArray[i][0] == code.toUpperCase()) {
     					div.innerHTML = "<center><img src='"+PicArray[i][1]+"' width='25%'> <br> <a href='"+PicArray[i][1]+"'>download</a></center>";
     					return;
 					}
