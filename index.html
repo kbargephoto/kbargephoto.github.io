@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<script src="codes.js"></script>
 	<style type="text/css">
 .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
@@ -93,7 +94,7 @@
  				var div = document.getElementById('photoDiv');
 				for (var i = 0; i < arrayLength; i++) {
     				if (PicArray[i][0] == code.toUpperCase()) {
-    					div.innerHTML = "<center><img src='"+PicArray[i][1]+"' width='25%'> <br> <a href='"+PicArray[i][1]+"'>download</a></center>";
+    					div.innerHTML = "<center><img src='"+PicArray[i][0]+"'.jpg width='25%'> <br> <a href='"+PicArray[i][1]+"'>download</a></center>";
     					return;
 					}
 				}
