@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Please Enter Your Photo Code</h1>
-<p></p>
-<input type="text" name="code" value="code">
-<input type="submit" value="Go">
-<br>
+	<head>
+		<script>
+			var PicArray = [
+							["0KS1KT", "img1.jpg"],
+							["4F5D1G", "img2.jpg"],
+							["MBJ9LK", "img3.jpg"]
+						];
+						
+			function DisplayPic(code) {
+ 				var arrayLength = PicArray.length;
+ 				var div = document.getElementById('photoDiv');
+				for (var i = 0; i < arrayLength; i++) {
+    				if (PicArray[i][0] == code) {
+    					div.innerHTML = div.innerHTML + PicArray[i][1];
+    				} else {
+    					div.innerHTML = div.innerHTML + "Sorry, that code is invalid, please email me at kksjdnf@skjdf.com if you have any questions";
+					}    				
+				}
+}
 
-</body>
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Please Enter Your Photo Code</h1>
+		<p></p>
+		<input type="text" id="code" name="code1" value="code">
+		<input type="submit" value="Go" onclick="DisplayPic(document.getElementById('code').value);">
+		<br>
+		<div id=photoDiv></div>
+	</body>
 </html>
