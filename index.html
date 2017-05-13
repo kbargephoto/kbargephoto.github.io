@@ -96,11 +96,28 @@
  				var div = document.getElementById('photoDiv');
 				for (var i = 0; i < arrayLength; i++) {
     				if (PicArray[i][0] == code.toUpperCase()) {
-    					div.innerHTML = "<center><img src='"+PicArray[i][0]+".jpg' width='25%'> <br> <a href='"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></center>";
-    					return;
+    					if (doesFileExist(PicArray[i][0]+".jpg")) {
+	    					div.innerHTML = "<center><img src='"+PicArray[i][0]+".jpg' width='25%'> <br> <a href='"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></center>";
+    						return;
+    					} else {
+							div.innerHTML = "<center>Sorry, photos are not quite ready. Check back soon. Please email me at &#107;&#98;&#97;&#114;&#103;&#101;&#112;&#104;&#111;&#116;&#111;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109; if you have any questions</center>";
+    					}
 					}
 				}
 				div.innerHTML = "<center>Sorry, that code is invalid, please email me at &#107;&#98;&#97;&#114;&#103;&#101;&#112;&#104;&#111;&#116;&#111;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109; if you have any questions</center>";
+			}
+			
+			function doesFileExist(urlToFile)
+			{
+				var xhr = new XMLHttpRequest();
+				xhr.open('HEAD', urlToFile, false);
+				xhr.send();
+	 
+				if (xhr.status == "404") {
+					return false;
+				} else {
+					return true;
+				}
 			}
 		</script>
 	</head>
