@@ -96,8 +96,8 @@
  				var div = document.getElementById('photoDiv');
 				for (var i = 0; i < arrayLength; i++) {
     				if (PicArray[i][0] == code.toUpperCase()) {
-    					if (doesFileExist(PicArray[i][0]+".jpg")) {
-	    					div.innerHTML = "<center><img src='"+PicArray[i][0]+".jpg' width='25%'> <br> <a href='"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></center>";
+    					if (doesFileExist("photos/"+PicArray[i][0]+".jpg")) {
+	    					div.innerHTML = "<center><img src='photos/"+PicArray[i][0]+".jpg' width='25%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></center>";
     						return;
     					} else {
 							div.innerHTML = "<center>Sorry, photos are not quite ready. Check back soon.<br>Please email me at &#107;&#98;&#97;&#114;&#103;&#101;&#112;&#104;&#111;&#116;&#111;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109; if you have any questions.</center>";
