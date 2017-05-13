@@ -96,7 +96,7 @@
  				var div = document.getElementById('photoDiv');
 				for (var i = 0; i < arrayLength; i++) {
     				if (PicArray[i][0] == code.toUpperCase()) {
-    					div.innerHTML = "<center><img src='"+PicArray[i][0]+".jpg' width='25%'> <br> <a href='"+PicArray[i][0]+".jpg'>download</a></center>";
+    					div.innerHTML = "<center><img src='"+PicArray[i][0]+".jpg' width='25%'> <br> <a href='"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></center>";
     					return;
 					}
 				}
