@@ -36,7 +36,7 @@
     color: white;
 }
 
-.photoDiv a {
+#photoDiv a {
     color: #43D1AF;
 }
 
@@ -118,10 +118,10 @@
 				for (var i = 0; i < arrayLength; i++) {
     				if (PicArray[i][0] == code.toUpperCase()) {
     					if (doesFileExist("photos/"+PicArray[i][0]+".jpg")) {
-	    					div.innerHTML = "<div style='width: 50%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>download</a></div>";
+	    					div.innerHTML = "<div style='width: 50%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".jpg'>Download</a></div>";
     						
     						if ( doesFileExist("photos/"+PicArray[i][0]+".2.jpg") ) {
-    							div.innerHTML = div.innerHTML + "<div style='width: 50%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".2.jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".2.jpg'>download</a></div>";
+    							div.innerHTML = div.innerHTML + "<div style='width: 50%; display:inline-block;'><img src='photos/"+PicArray[i][0]+".2.jpg' width='80%'> <br> <a href='photos/"+PicArray[i][0]+".jpg' download='"+PicArray[i][0]+".2.jpg'>Download</a></div>";
     						}
     						
     						return;
@@ -166,7 +166,7 @@
 				I loved photographing you and your family today! I hope this is a lovely treat for your Mother's day.  
 				<br>If you have any other photography needs you can visit my <a href="https://www.facebook.com/KBargePhotography/">K.Barge Photography Business Facebook</a> page. 
 				<br>My fit4mom special is $60 for a 30 minute kids mini shoot and $80 for a family 45-1hr photoshoot.  I would be happy to set you up, just message me and mention Fit4Mom Mother's day!  
-				<br>Have a great day! 
+				<br>Have a great day!
 			</h2>
 		</div>
 	</body>
